@@ -17,7 +17,7 @@
 }
 
 .Content > h1 {
-    margin: 200px 0 0 100px;
+    margin: 100px 0 0 100px;
     font-family: 'GT-America-Expanded-Black';
 }
 
@@ -25,4 +25,9 @@
     margin: 16px 0 0 100px;
     background: black;
     font-weight: bold;
+}
+
+.Youtube {
+    width: 100%;
+    height: 100%;
 }

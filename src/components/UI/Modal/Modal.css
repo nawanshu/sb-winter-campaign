@@ -1,0 +1,23 @@
+.Modal {
+    position: fixed;
+    z-index: 500;
+    background-color: white;
+    width: 90%;
+    height: 90%;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 1px black; 
+    padding: 30px;
+    left: 5%;
+    top: 5%;
+    box-sizing: border-box;
+    transition: all 0.3s ease-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.CloseButton {
+    position: absolute;
+    top: -4px;
+    right: -8px;
+}
