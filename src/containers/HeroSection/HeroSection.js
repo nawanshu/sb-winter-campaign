@@ -11,7 +11,7 @@ class HeroSection extends Component {
         return (
             <Aux>
                 <div className={classes.HeroSection}>
-                    <video poster="" id="vid">
+                    <video autoPlay loop poster="" id="vid">
                         <source src={heroVideo} type="video/mp4" />
                     </video>
                 </div>
