@@ -1,9 +1,17 @@
+@font-face {
+  font-family: GT-America-Expanded-Black;
+  src: url(./assets/fonts/GT-America/GT-America-Expanded-Black.ttf);
+}
+
+@font-face {
+  font-family: Roboto-Regular;
+  src: url(./assets/fonts/Roboto/Roboto-Regular.ttf);
+}
+
 body {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: 'Roboto-Regular';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
