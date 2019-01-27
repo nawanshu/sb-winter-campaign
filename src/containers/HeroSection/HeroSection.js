@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Button from '@material-ui/core/Button';
 
 import classes from 'containers/HeroSection/HeroSection.css';
-import heroVideo from 'assets/images/Desktop_loop.mp4';
 import Aux from 'hoc/Auxiliary'
 import Modal from 'components/UI/Modal/Modal';
 
@@ -40,7 +39,7 @@ class HeroSection extends Component {
                 </Modal>
                 <div className={classes.HeroSection}>
                     <video autoPlay loop poster="" id="vid">
-                        <source src={heroVideo} type="video/mp4" />
+                        <source src='assets/images/Desktop_loop.mp4' type="video/mp4" />
                     </video>
                 </div>
                 <div className={classes.Content}>

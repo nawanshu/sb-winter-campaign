@@ -5,6 +5,7 @@ import classes from 'components/Layout/Layout.css';
 import Header from  'components/Header/Header';
 import Footer from 'components/Footer/Footer';
 
+
 const layout = (props) => (
     <Aux>
         <Header />

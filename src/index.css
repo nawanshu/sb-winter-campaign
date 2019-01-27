@@ -1,16 +1,16 @@
 @font-face {
-  font-family: GT-America-Expanded-Black;
-  src: url(./assets/fonts/GT-America/GT-America-Expanded-Black.ttf);
+  font-family: 'GT-America-Expanded-Black';
+  src: url('assets/fonts/GT-America/GT-America-Expanded-Black.ttf');
 }
 
 @font-face {
-  font-family: Roboto-Regular;
-  src: url(./assets/fonts/Roboto/Roboto-Regular.ttf);
+  font-family: 'Roboto-Regular';
+  src: url('assets/fonts/Roboto/Roboto-Regular.ttf');
 }
 
 @font-face {
-  font-family: Roboto-Light;
-  src: url(./assets/fonts/Roboto/Roboto-Light.ttf);
+  font-family: 'Roboto-Light';
+  src: url('assets/fonts/Roboto/Roboto-Light.ttf');
 }
 
 body {

@@ -4,13 +4,12 @@ import IconButton from '@material-ui/core/IconButton';
 import Badge from '@material-ui/core/Badge';
 
 import classes from 'components/Header/Header.css';
-import soundboksLogo from 'assets/images/logo.svg';
 
 const header = () => (
     <header className={classes.Header}>
         <div className={classes.Logo}>
             <a href="/">
-                <img src={soundboksLogo} alt="SoundBoksLogo" />
+                <img src='assets/images/logo.svg' alt="SoundBoksLogo" />
             </a>
         </div>
         <nav className={classes.Navigation}>

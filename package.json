@@ -114,5 +114,8 @@
     "presets": [
       "react-app"
     ]
+  },
+  "devDependencies": {
+    "copy-webpack-plugin": "^4.6.0"
   }
 }

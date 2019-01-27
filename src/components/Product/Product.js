@@ -7,7 +7,12 @@ import Aux from 'hoc/Auxiliary';
 const renderProductImage = (imgSrc, imgSrc2x) => {
     return (
         <div className={classes.ImageContainer}>
-            <img src={require('../../assets/images/Desktop_Campaign_Image.jpg')} alt="productimageneed to be updated"/>
+            <picture>
+                <source media="(min-width: 1024px)" srcSet={imgSrc}/>
+                <source media="(min-width: 2408px)" srcSet={imgSrc2x}/>
+                <img src={imgSrc} alt="productimageneed to be updated"/>
+            </picture>
+            {/* <img src={imgSrc} alt="productimageneed to be updated"/> */}
         </div>
     );
 };
@@ -17,17 +22,19 @@ const renderProductInfo = (info) => {
         <div className={classes.InfoContainer}>
             <h1 
             style={{
-                'font-familly': info.titleFontFamily,
-                'line-height': info.titleLineHeight,
-                'font-size': info.titleFontSize
+                fontFamilly: info.titleFontFamily,
+                lineHeight: info.titleLineHeight,
+                fontSize: info.titleFontSize
             }}>{ info.title }</h1>
             <p
             style={{
-                'font-familly': info.descFontFamily,
-                'line-height': info.descLineHeight,
-                'font-size': info.descFontSize
-            }}>{ info.description }</p>
-            <Button variant="contained" color="primary" className={classes.button}>CLAIM DEAL</Button>
+                fontFamilly: info.descFontFamily,
+                lineHeight: info.descLineHeight,
+                fontSize: info.descFontSize
+            }} dangerouslySetInnerHTML={{__html: info.description }}></p>
+            {
+                info.hasAction === 'Y' ? <Button variant="contained" color="primary" className={classes.button}>CLAIM DEAL</Button> : null
+            }
         </div>
     );
 };
@@ -44,7 +51,7 @@ const renderLeftToRight = (props) => {
 const renderRightToLeft = (props) => {
     return (
         <Aux>
-            {renderProductInfo(props.productInfo.title, props.productInfo.description)}
+            {renderProductInfo(props.productInfo)}
             {renderProductImage(props.productInfo.imageUrl)}
         </Aux>
     );
@@ -53,10 +60,11 @@ const renderRightToLeft = (props) => {
 const product = (props) => (
     <div className={classes.Product}
         style={{
-            'background-color': props.productInfo.backgroundColor
+            backgroundColor: props.productInfo.backgroundColor,
+            //flexDirection: props.productInfo.direction === 'LTR' ? 'row' : 'row-reverse'
         }}>
         {
-            props.direction === 'LTE' ? renderLeftToRight(props) : renderLeftToRight(props)
+            props.productInfo.direction === 'LTR' ? renderLeftToRight(props) : renderRightToLeft(props)
         }
     </div>
 );
