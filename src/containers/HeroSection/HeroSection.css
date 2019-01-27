@@ -1,7 +1,6 @@
 .HeroSection {
     display: flex;
     flex-direction: column;
-    font-family: 'GT-America-Expanded-Black';
 }
 
 .HeroSection video {
@@ -15,6 +14,8 @@
     margin-top: -562px;
     position: absolute;
     color: white;
+    font-family: 'GT-America-Expanded-Black';
+    box-sizing: border-box;
 }
 
 .Content > h1 {
@@ -25,8 +26,10 @@
 .Content > Button {
     margin: 16px 0 0 100px;
     background: black;
-    font-weight: bold;
     font-size: 12px;
+    width: 180px;
+    height: 50px;
+    font-family: 'GT-America-Expanded-Black';
 }
 
 .Youtube {

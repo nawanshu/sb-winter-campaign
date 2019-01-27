@@ -22,7 +22,6 @@ class HeroSection extends Component {
         this.setState({
             watching: false
         })
-        console.log(this.frameElement[0].src);
     }
 
     render () {
@@ -46,7 +45,7 @@ class HeroSection extends Component {
                 </div>
                 <div className={classes.Content}>
                     <h1>SEIZE<br />THE SEASON</h1>
-                    <Button onClick={this.watchHandler} variant="contained" color="primary" className={classes.button}>WATCH VIDEO</Button>
+                    <Button size="large" onClick={this.watchHandler} variant="contained" color="primary" className={classes.button}>WATCH VIDEO</Button>
                 </div>
             </Aux>
         );
