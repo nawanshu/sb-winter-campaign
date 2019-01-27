@@ -16,7 +16,7 @@ const modal = (props) => (
                 opacity: props.show ? '1' : '0'
             }}>
             {props.children}
-            <IconButton onClick={props.modalClosed} className={[classes.button, classes.CloseButton].join(' ')} aria-label="Close">
+            <IconButton size="large" onClick={props.modalClosed} className={[classes.button, classes.CloseButton].join(' ')} aria-label="Close">
                     <Icon>cancel</Icon>
             </IconButton>
         </div>
