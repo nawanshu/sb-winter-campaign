@@ -1,0 +1,20 @@
+.ImageGallery {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ImageGallery img {
+    width: 300px;
+}
+
+.ImageTitle{
+    text-align: center;
+    font-family: 'GT-America-Expanded-Black';
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.Container1 {
+    padding: 10x
+}
