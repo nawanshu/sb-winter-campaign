@@ -1,0 +1,27 @@
+.Product {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 120px 50px;
+    background-color: #f6f6f9;
+}
+
+.InfoContainer {
+    margin: 0 50px 0 50px;
+}
+
+.InfoContainer h1{
+    text-transform: uppercase;
+    font-family: 'GT-America-Expanded-Black';
+}
+
+.InfoContainer p {
+    margin: 20px 0 40px 0;
+}
+
+.InfoContainer Button {
+    background: orange;
+    font-weight: bold;
+    font-size: 12px;
+    font-family: 'GT-America-Expanded-Black';
+}
