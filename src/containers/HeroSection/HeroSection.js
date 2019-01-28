@@ -38,7 +38,7 @@ class HeroSection extends Component {
                 </Modal>
                 <div className={classes.HeroSection}>
                     <video autoPlay muted loop poster="" id="vid">
-                        <source src='assets/images/Desktop_loop.mp4' type="video/mp4" />
+                        <source src='assets/images/Desktop_loop_min.mp4' type="video/mp4" />
                     </video>
                 </div>
                 <div className={classes.Content}>
