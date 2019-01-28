@@ -1,17 +1,20 @@
 @font-face {
   font-family: 'GT-America-Expanded-Black';
+  font-display: swap;
   src: url('assets/fonts/GT-America/GT-America-Expanded-Black.ttf');
 }
 
 @font-face {
   font-family: 'Roboto-Light';
+  font-display: swap;
   src: url('assets/fonts/Roboto/Roboto-Light.ttf');
 }
 
 body {
   margin: 0;
   padding: 0;
-  font-family: 'GT-America-Expanded-Black';
+  font-display: swap;
+  font-family: 'GT-America-Expanded-Black', 'Roboto-Light', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
