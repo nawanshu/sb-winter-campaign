@@ -24,7 +24,7 @@ class Products extends Component {
             <section>
                 {
                     this.state.products.map(product => {
-                        return <Product key={product.id} productInfo={product} />
+                        return <Product key={product.type} productInfo={product} />
                     }) 
                 }
             </section>

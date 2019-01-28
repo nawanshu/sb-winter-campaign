@@ -4,31 +4,34 @@ import Button from '@material-ui/core/Button';
 import classes from 'components/Product/Product.css';
 import Aux from 'hoc/Auxiliary';
 
-const renderProductImage = (imgSrc, imgSrc2x) => {
+const renderProductImage = (info) => {
     return (
         <div className={classes.ImageContainer}>
             <picture>
-                <source media="(min-width: 1024px)" srcSet={imgSrc}/>
-                <source media="(min-width: 2408px)" srcSet={imgSrc2x}/>
-                <img src={imgSrc} alt="productimageneed to be updated"/>
+                <source media="(min-width: 1024px)" srcSet={info.imageUrl}/>
+                <source media="(min-width: 2408px)" srcSet={info.imageUrl2x}/>
+                <img src={info.imageUrl} alt="ProductImage"/>
             </picture>
-            {/* <img src={imgSrc} alt="productimageneed to be updated"/> */}
         </div>
     );
 };
 
 const renderProductInfo = (info) => {
     return (
-        <div className={classes.InfoContainer}>
-            <h1 
+        <div className={classes.InfoContainer}  
+        style={{
+            paddingLeft: info.direction === 'LTR'? '50px' : '0px',
+            paddingRight: info.direction === 'RTL' ? '50px' : '0px'
+        }}>
+            <h1 className={classes.CampaignHeader}
             style={{
-                fontFamilly: info.titleFontFamily,
+                fontFamily: info.titleFontFamily,
                 lineHeight: info.titleLineHeight,
                 fontSize: info.titleFontSize
             }}>{ info.title }</h1>
             <p
             style={{
-                fontFamilly: info.descFontFamily,
+                fontFamily: info.descFontFamily,
                 lineHeight: info.descLineHeight,
                 fontSize: info.descFontSize
             }} dangerouslySetInnerHTML={{__html: info.description }}></p>
@@ -39,34 +42,63 @@ const renderProductInfo = (info) => {
     );
 };
 
-const renderLeftToRight = (props) => {
+const renderCampaignBlock = (info) => {
     return (
         <Aux>
-            {renderProductImage(props.productInfo.imageUrl, props.productInfo.imageUrl2x)}
-            {renderProductInfo(props.productInfo)}
+            <div className={classes.CampaignBlock}>
+                <div className={classes.CampaignProduct}>
+                    {renderProductImage(info)}
+                    {renderProductInfo(info)}
+                </div>
+            </div>
         </Aux>
-    );
+    )
 };
 
-const renderRightToLeft = (props) => {
+const renderUspBlock = (infoArr) => (
+    <div className={classes.UspBlock}>
+        {
+            infoArr.map(deal => {
+                return (
+                    <div key={deal.id} className={classes.UspProduct}
+                    style={{
+                        flexDirection: deal.direction === 'LTR' ? 'row' : 'row-reverse'
+                    }}>
+                        {renderProductImage(deal)}
+                        {renderProductInfo(deal)}
+                    </div>
+                )
+            }) 
+        }
+            
+    </div>
+);
+
+const renderDealBlock = (info) => {
     return (
         <Aux>
-            {renderProductInfo(props.productInfo)}
-            {renderProductImage(props.productInfo.imageUrl)}
+            <div className={classes.DealBlock}>
+                <div className={classes.DealProduct}>
+                    {renderProductImage(info)}
+                    {renderProductInfo(info)}
+                </div>
+            </div>
         </Aux>
-    );
+    )
 };
 
 const product = (props) => (
-    <div className={classes.Product}
-        style={{
-            backgroundColor: props.productInfo.backgroundColor,
-            //flexDirection: props.productInfo.direction === 'LTR' ? 'row' : 'row-reverse'
-        }}>
+    <Aux>
         {
-            props.productInfo.direction === 'LTR' ? renderLeftToRight(props) : renderRightToLeft(props)
+            props.productInfo.type === 'wintercampaign-block' && renderCampaignBlock(props.productInfo.data[0])
         }
-    </div>
+        {
+            props.productInfo.type === 'usp-block' && renderUspBlock(props.productInfo.data)
+        }
+        {
+            props.productInfo.type === 'deal_block' && renderDealBlock(props.productInfo.data[0])
+        }
+    </Aux>
 );
 
 export default product;

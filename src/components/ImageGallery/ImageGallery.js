@@ -11,7 +11,7 @@ const imageGallary = (props) => (
             {
                 ImagesList.map((imgSrc, index) => {
                     return (
-                        <div className={classes.Container1} key={index}>
+                        <div className={classes.ImageContainer} key={index}>
                             <img src={imgSrc} alt="image1" />
                         </div>
                     );

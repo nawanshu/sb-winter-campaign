@@ -2,8 +2,8 @@ import React from 'react';
 import Icon from '@material-ui/core/Icon';
 import IconButton from '@material-ui/core/IconButton';
 
-import classes from 'components/UI/Modal/Modal.css';
-import Backdrop from 'components/UI/Backdrop/Backdrop';
+import classes from 'UI/Modal/Modal.css';
+import Backdrop from 'UI/Backdrop/Backdrop';
 import Aux from 'hoc/Auxiliary';
 
 const modal = (props) => (

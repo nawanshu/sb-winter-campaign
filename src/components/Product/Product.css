@@ -1,38 +1,69 @@
-.Product {
+.CampaignBlock {
+    background-color: #f8f8f8;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.CampaignProduct {
     display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
     padding: 120px 50px;
-    background-color: #f6f6f9;
-    margin: 0 auto;
     width: 1024px;
+    margin: 0 auto;
+}
+
+.UspBlock {
+    background-color: #fff;
+    position: relative;
+    box-sizing: border-box;
+    padding: 120px 50px;
+    width: 1085px;
+    margin: 0 auto;
+}
+
+.UspProduct {
+    display: flex;
+    width: 100%;
+}
+
+.DealBlock {
+    background-color: #f8f8f8;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.DealProduct {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 120px 50px;
+    width: 1024px;
+    margin: 0 auto;
 }
 
 .ImageContainer {
-    width: 50%;
+    width: 52%;
 }
 
-.ImageContainer picture {
-    min-width: 100%;
-    min-height: 100%;
+.ImageContainer img {
+    width: 100%;
+    height: 100%;
+    margin-top: -20px;
 }
 
 .InfoContainer {
-    margin: 0 50px 0 50px;
-}
-
-.InfoContainer h1{
-    text-transform: uppercase;
-    font-family: 'GT-America-Expanded-Black';
-}
-
-.InfoContainer p {
-    margin: 20px 0 40px 0;
+    width: 45%;
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .InfoContainer Button {
     background: orange;
-    font-weight: bold;
     font-size: 12px;
     font-family: 'GT-America-Expanded-Black';
+    width: 150px;
+    height: 50px;
 }

@@ -3,7 +3,7 @@ import Button from '@material-ui/core/Button';
 
 import classes from 'containers/HeroSection/HeroSection.css';
 import Aux from 'hoc/Auxiliary'
-import Modal from 'components/UI/Modal/Modal';
+import Modal from 'UI/Modal/Modal';
 
 class HeroSection extends Component {
 
