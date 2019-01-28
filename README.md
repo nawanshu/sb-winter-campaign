@@ -1,3 +1,25 @@
+## Implement the winter campaign page using React.js.
+## Project github project instructions
+During project implementation, over engineerring and under engineering trade off kept in mind, as this project is small to showcase big things like store, but still I have kept few things for consideration in order to think deep and for the future of the app. Features which are addons as:
+
+- Test cases setup and add a file to showcase where to write test case.
+- We can use store, for that, Just added a empty folder where we can place our Reducers and Actions.
+- React component should be granular focused, so that they can be used multiple times, However, We are using here once due application size. So have taken care between granularity, due to size constraint of the application.
+
+## Supporting tools and technologies used
+- React 16.7.0
+- Jest 23.6.0
+- Material UI 3.9.0 for Icons
+- WebPack 4.19.1
+- Create-React-App 2.1.3
+- Styled-components 4.1.3
+
+## Project Branching
+- ###master branch: Final code with all the basic requirements implementation.
+- ###audit-1 branch: Performace auditing improvement.
+- ###addons branch: Addons features included like styled component, testing.
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
