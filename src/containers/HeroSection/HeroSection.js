@@ -37,7 +37,7 @@ class HeroSection extends Component {
                     </iframe> : null }
                 </Modal>
                 <div className={classes.HeroSection}>
-                    <video autoPlay loop poster="" id="vid">
+                    <video autoPlay muted loop poster="" id="vid">
                         <source src='assets/images/Desktop_loop.mp4' type="video/mp4" />
                     </video>
                 </div>
