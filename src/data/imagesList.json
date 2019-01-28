@@ -1,6 +1,21 @@
 [
-    "assets/images/Desktop_Volume.jpg",
-    "assets/images/Desktop_Portability.jpg",
-    "assets/images/Desktop_Durability.jpg",
-    "assets/images/Desktop_Battery.jpg"
+    {
+        "id" : "img001",
+        "url": "assets/images/Desktop_Volume.jpg",
+        "altText": "Volume Image"
+    },
+    {
+        "id" : "img002",
+        "url": "assets/images/Desktop_Portability.jpg",
+        "altText": "Volume Image"
+    },{
+        "id" : "img003",
+        "url": "assets/images/Desktop_Durability.jpg",
+        "altText": "Volume Image"
+    },
+    {
+        "id" : "img004",
+        "url": "assets/images/Desktop_Battery.jpg",
+        "altText": "Volume Image"
+    }
 ]

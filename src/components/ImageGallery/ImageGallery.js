@@ -9,10 +9,10 @@ const imageGallary = (props) => (
         <h1 className={classes.ImageTitle}>#SEIZETHESEASON</h1>
         <div className={classes.ImageGallery}>
             {
-                ImagesList.map((imgSrc, index) => {
+                ImagesList.map((imgProps, index) => {
                     return (
                         <div className={classes.ImageContainer} key={index}>
-                            <img src={imgSrc} alt="image1" />
+                            <img src={imgProps.url} alt={imgProps.altText} />
                         </div>
                     );
                 })
