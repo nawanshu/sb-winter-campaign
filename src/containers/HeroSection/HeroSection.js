@@ -20,22 +20,21 @@ class HeroSection extends Component {
     watchCloseHandler = () => {
         this.setState({
             watching: false
-        })
+        });
     }
 
     render () {
         return (
             <Aux>
                 <Modal show={this.state.watching} modalClosed={this.watchCloseHandler}>
-                    {/* <video controls poster="" id="vid">
-                        <source src={heroVideo} type="video/mp4" />
-                    </video> */}
-                    <iframe ref={(frame) => { this.frameElement = frame }}
+                    {this.state.watching ? 
+                    <iframe ref="youtube"
                         className={classes.Youtube} 
                         title='Soundbok2' 
                         src="https://www.youtube.com/embed/TshvK47m5gU?autoplay=1" 
                         frameBorder="0" 
-                        allowFullScreen></iframe>
+                        allowFullScreen>
+                    </iframe> : null }
                 </Modal>
                 <div className={classes.HeroSection}>
                     <video autoPlay loop poster="" id="vid">
