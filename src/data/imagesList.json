@@ -1,21 +1,21 @@
 [
     {
         "id" : "img001",
-        "url": "assets/images/Desktop_Volume.jpg",
+        "url": "assets/images/Desktop_Volume.webp",
         "altText": "Volume Image"
     },
     {
         "id" : "img002",
-        "url": "assets/images/Desktop_Portability.jpg",
+        "url": "assets/images/Desktop_Portability.webp",
         "altText": "Volume Image"
     },{
         "id" : "img003",
-        "url": "assets/images/Desktop_Durability.jpg",
+        "url": "assets/images/Desktop_Durability.webp",
         "altText": "Volume Image"
     },
     {
         "id" : "img004",
-        "url": "assets/images/Desktop_Battery.jpg",
+        "url": "assets/images/Desktop_Battery.webp",
         "altText": "Volume Image"
     }
 ]
