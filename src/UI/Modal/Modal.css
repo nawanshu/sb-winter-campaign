@@ -3,7 +3,7 @@
     z-index: 500;
     width: 95%;
     height: 95%;
-    left: 5%;
+    left: 4%;
     top: 5%;
     padding: 10px;
     box-sizing: border-box;
@@ -15,6 +15,6 @@
 
 .CloseButton {
     position: absolute;
-    top: -4px;
-    right: -8px;
+    top: -330px;
+    right: -10px;
 }

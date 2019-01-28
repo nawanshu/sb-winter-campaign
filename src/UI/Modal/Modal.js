@@ -1,6 +1,6 @@
 import React from 'react';
 import Icon from '@material-ui/core/Icon';
-import IconButton from '@material-ui/core/IconButton';
+import Fab from '@material-ui/core/Fab';
 
 import classes from 'UI/Modal/Modal.css';
 import Backdrop from 'UI/Backdrop/Backdrop';
@@ -16,9 +16,9 @@ const modal = (props) => (
                 opacity: props.show ? '1' : '0'
             }}>
             {props.children}
-            <IconButton size="large" onClick={props.modalClosed} className={[classes.button, classes.CloseButton].join(' ')} aria-label="Close">
-                    <Icon>cancel</Icon>
-            </IconButton>
+            <Fab onClick={props.modalClosed} color="secondary" aria-label="Close" className={[classes.fab, classes.CloseButton].join(' ')}>
+                <Icon>cancel</Icon>
+            </Fab>
         </div>
         
     </Aux>
